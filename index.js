@@ -1,8 +1,18 @@
 //darktheme
+
 $(document).ready(function () {
   $("#darkthemeeditor").on("click", function () {
     $("html").toggleClass("dark");
   });
+  $("#tr").hover(
+    function () {
+      $(this).css("background", "#F00");
+    },
+    function () {
+      $(this).css("background", "#000");
+    }
+  );
+
   if (
     localStorage.getItem("theme") === "dark" ||
     (!("theme" in localStorage) &&
